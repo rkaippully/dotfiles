@@ -6,10 +6,20 @@
 
 DIR=`pwd`/`dirname $0`
 
-# Spacemacs
-if [[ -e ${HOME}/.spacemacs ]]; then
-  echo "${HOME}/.spacemacs already exists. Skipping"
-else
-  echo "Creating ${HOME}/.spacemacs"
-  ln -s ${DIR}/.spacemacs ${HOME}/.spacemacs
-fi
+function install-file()
+{
+    filename=$1
+    src=${DIR}/${filename}
+    dest=${HOME}/${filename}
+
+    if [[ -e ${dest} ]]; then
+        echo "${dest} already exists. Skipping"
+    else
+        echo "Creating ${dest}"
+        mkdir -p `dirname ${dest}`
+        ln -s ${src} ${dest}
+    fi
+}
+
+install-file .spacemacs
+install-file .stack/config.yaml
