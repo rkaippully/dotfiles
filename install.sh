@@ -23,4 +23,3 @@ function install-file()
 
 install-file .spacemacs
 install-file .stack/config.yaml
-install-file .emacs.d/private/intero/packages.el
