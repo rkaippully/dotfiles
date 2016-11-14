@@ -21,5 +21,6 @@ function install-file()
     fi
 }
 
+install-file .profile
 install-file .spacemacs
 install-file .stack/config.yaml
