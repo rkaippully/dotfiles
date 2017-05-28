@@ -23,6 +23,9 @@ fi
 if [ -d "$HOME/opt/cross/bin" ] ; then
     PATH="$HOME/opt/cross/bin:$PATH"
 fi
+if [ -d "$HOME/djgpp/bin" ] ; then
+    PATH="$HOME/djgpp/bin:$PATH"
+fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
