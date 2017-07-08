@@ -26,6 +26,9 @@ fi
 if [ -d "$HOME/djgpp/bin" ] ; then
     PATH="$HOME/djgpp/bin:$PATH"
 fi
+if [ -d "$HOME/gcc-cross/bin" ] ; then
+    PATH="$HOME/gcc-cross/bin:$PATH"
+fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
